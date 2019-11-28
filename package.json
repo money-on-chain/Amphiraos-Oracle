@@ -1,0 +1,31 @@
+{
+  "name": "moc-oracle",
+  "version": "1.0.0",
+  "private": true,
+  "description": "MoC USD-BTC price provider",
+  "main": "/contracts/MocMedianizer.sol",
+  "scripts": {
+    "test": "truffle test",
+    "migrate-dev": "truffle migrate --network development",
+    "migrate-testnet": "truffle migrate --network rskTestnet",
+    "deploy-reset-dev": "rm zos.dev-*.json; rm -r build/contracts; truffle migrate --network development --reset",
+    "deploy-reset-testnet": "rm zos.dev-*.json; rm -r build/contracts; truffle migrate --network rskTestnet --reset"
+  },
+  "devDependencies": {
+    "truffle": "5.0.21",
+    "chai": "4.2.0",
+    "truffle-hdwallet-provider": "1.0.10",
+    "ganache-cli": "6.4.4-beta.0",
+    "bignumber.js": "9.0.0",
+    "eslint": "5.16.0",
+    "openzeppelin-test-helpers": "0.4.0"
+  },
+  "keywords": [
+    "oracle",
+    "solidity",
+    "priceFeed",
+    "medianizer"
+  ],
+  "author": "MakerDao",
+  "license": "GPL"
+}
