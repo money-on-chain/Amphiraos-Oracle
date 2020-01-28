@@ -1,6 +1,6 @@
 {
   "minValues": 1,
-  "initialPrice": 10558,
+  "initialPrice": 0.083738,
   "expirationTime": 300,
-  "governor": "0xD63C0441b9A6c019917e9773992F7B5428542cbb"
+  "governor": "0x4eAC4518e81B3A5198aADAb998D2610B46aAA609"
 }

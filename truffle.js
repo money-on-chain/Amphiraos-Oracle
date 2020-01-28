@@ -31,6 +31,13 @@ module.exports = {
       host: "localhost",
       port: 4444,
       network_id: "*"
+    },
+    rskTestnet: {
+      // 0xC67D9eE30d2119A384E02de568BE80FE785074Ba
+      host: 'http://localhost:4444',
+      provider: new HDWalletProvider('NUESTRA CLAVE PRIVADA', 'http://localhost:4444'),
+      network_id: '*',
+      gasPrice: 60000000
     }
   }
 };
