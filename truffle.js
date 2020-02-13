@@ -1,4 +1,4 @@
-const HDWalletProvider = require("truffle-hdwallet-provider");
+const HDWalletProvider = require("@truffle/hdwallet-provider");
 
 const mnemonic =
   "lab direct float merit wall huge wheat loyal maple cup battle butter";
@@ -33,9 +33,14 @@ module.exports = {
       network_id: "*"
     },
     rskTestnet: {
-      // 0xC67D9eE30d2119A384E02de568BE80FE785074Ba
-      host: 'http://localhost:4444',
-      provider: new HDWalletProvider('NUESTRA CLAVE PRIVADA', 'http://localhost:4444'),
+      host: 'https://public-node.testnet.rsk.co',
+      provider: () => new HDWalletProvider('PRIVATE KEY', "https://public-node.testnet.rsk.co"),
+      network_id: '*',
+      gasPrice: 60000000
+    },
+    rskMainnet: {
+      host: 'https://public-node.rsk.co',
+      provider: () => new HDWalletProvider('PRIVATE KEY', "https://public-node.rsk.co"),
       network_id: '*',
       gasPrice: 60000000
     }
