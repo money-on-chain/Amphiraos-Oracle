@@ -1,6 +1,6 @@
-const HDWalletProvider = require("@truffle/hdwallet-provider");
+const HDWalletProvider = require('truffle-hdwallet-provider');
 
-const mnemonic =
+const mnemonic = process.env.MNEMONIC ||
   "lab direct float merit wall huge wheat loyal maple cup battle butter";
 
 module.exports = {
@@ -9,6 +9,7 @@ module.exports = {
   compilers: {
     solc: {
       version: "0.4.24",
+      evmVersion: 'byzantium',
       settings: {
         optimizer: {
           enabled: true,
@@ -32,17 +33,59 @@ module.exports = {
       port: 4444,
       network_id: "*"
     },
-    rskTestnet: {
+    mocTestnet: {
       host: 'https://public-node.testnet.rsk.co',
-      provider: () => new HDWalletProvider('PRIVATE KEY', "https://public-node.testnet.rsk.co"),
+      provider: () => new HDWalletProvider(mnemonic, "https://public-node.testnet.rsk.co"),
       network_id: '*',
-      gasPrice: 60000000
+      gas: 3800000,
+      gasPrice: 68000000,
+      skipDryRun: true,
+      confirmations: 1
     },
-    rskMainnet: {
+    mocMainnet: {
       host: 'https://public-node.rsk.co',
-      provider: () => new HDWalletProvider('PRIVATE KEY', "https://public-node.rsk.co"),
+      provider: () => new HDWalletProvider(mnemonic, "https://public-node.rsk.co"),
       network_id: '*',
-      gasPrice: 60000000
+      gas: 3800000,
+      gasPrice: 60000000,
+      skipDryRun: true,
+      confirmations: 1
+    },
+    ethTestnet: {
+      host: 'https://public-node.testnet.rsk.co',
+      provider: () => new HDWalletProvider(mnemonic, "https://public-node.testnet.rsk.co"),
+      network_id: '*',
+      gas: 3800000,
+      gasPrice: 69000000,
+      skipDryRun: true,
+      confirmations: 1
+    },
+    ethMainnet: {
+      host: 'https://public-node.rsk.co',
+      provider: () => new HDWalletProvider(mnemonic, "https://public-node.rsk.co"),
+      network_id: '*',
+      gas: 3800000,
+      gasPrice: 60000000,
+      skipDryRun: true,
+      confirmations: 1
+    },
+    rdocTestnet: {
+      host: 'https://public-node.testnet.rsk.co',
+      provider: () => new HDWalletProvider(mnemonic, "https://public-node.testnet.rsk.co"),
+      network_id: '*',
+      gas: 3800000,
+      gasPrice: 68000000,
+      skipDryRun: true,
+      confirmations: 1
+    },
+    rdocMainnet: {
+      host: 'https://public-node.rsk.co',
+      provider: () => new HDWalletProvider(mnemonic, "https://public-node.rsk.co"),
+      network_id: '*',
+      gas: 3800000,
+      gasPrice: 60000000,
+      skipDryRun: true,
+      confirmations: 1
     }
   }
 };
