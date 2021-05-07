@@ -28,6 +28,12 @@ The medianizer is the smart contract which provides MoC trusted reference price.
 
 It maintains a whitelist of price feed contracts which are allowed to post price updates and a record of recent prices supplied by each address. Every time a new price update is received the median of all feed prices is re-computed and the medianized value is updated.
 
+## Proxy Oracle
+
+If you are going to start to consume oracle in your contract/app please point to Proxy Oracle, if you don't want to change address of the new version of MoC Oracles ( Decentralized Oracle) when its ready (soon)
+
+[Proxy Oracle](https://github.com/money-on-chain/Proxy_Oracle)
+
 ### Medianizer implementations addresses
 
 
