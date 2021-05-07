@@ -3,7 +3,7 @@
 > MoC USD-BTC price provider contract. This is the current implementation of oracle on MoC system, also we are working on a new
 > generation 'OMOC Decentralized Oracle' 
 
-This project is based on MakerDao Medianizer and PriceFeed solution. (link)[https://github.com/makerdao]
+This project is based on MakerDao Medianizer and PriceFeed solution.
 
 ## Feeds price feed oracles
 
@@ -15,7 +15,7 @@ Independent price feed operators constantly monitor the reference price across a
 
 Price updates are written to the blockchain via price feed contracts which are deployed and owned by feed operators. Price feed contracts which have been whitelisted by the medianizer are able to forward their prices for inclusion in the medianized price.
 
-(take a look to pricefeed app implementation)[https://github.com/money-on-chain/price-feeder]
+[take a look to pricefeed app implementation](https://github.com/money-on-chain/price-feeder)
 
 ### Permissions:
 
@@ -53,7 +53,8 @@ If you are going to start to consume oracle in your contract/app please point to
 Consuming oracle from another contract
 
 Take a look to Oracle Interface **IMoCBaseOracle**. It return tuple, the price in wei and boolean if is valid result.
-Note: If its not valid consider not used or raise an error because the price is out of time limit.
+
+**Note**: If the tuple return boolean **false** (not valid), consider not used or raise an error because the price is out of time limit.
 
 ```
 pragma solidity 0.5.8;
@@ -69,7 +70,7 @@ interface IMoCBaseOracle {
 
 #### API 
 
-Take a look to (github api site)[https://github.com/money-on-chain/py_Moneyonchain]
+Take a look to [github api site](https://github.com/money-on-chain/py_Moneyonchain)
 
 ### Contract deployment
 
