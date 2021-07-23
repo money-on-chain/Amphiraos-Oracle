@@ -42,9 +42,12 @@ If you are going to start to consume oracle in your contract/app please point to
 |  BTC/USD |  MOC     |  Testnet  |  Medianizer  | [0x26a00aF444928d689DDEC7b4D17c0E4a8c9D407d](https://explorer.testnet.rsk.co/address/0x26a00aF444928d689DDEC7b4D17c0E4a8c9D407d) |
 |  RIF/USD |  RDOC    |  Testnet  |  Medianizer  | [0x987ccC60c378a61d167B6DD1EEF7613c6f63938f](https://explorer.testnet.rsk.co/address/0x987ccC60c378a61d167B6DD1EEF7613c6f63938f) |
 |  ETH/BTC |  ETH     |  Testnet  |  Medianizer  | [0x4d4254d3744e1e4beb090ab5d8eb48096Ff4AE27](https://explorer.testnet.rsk.co/address/0x4d4254d3744e1e4beb090ab5d8eb48096ff4ae27?__ctab=Code) |
+|  BTC/USDT | USDT    |  Testnet  |  Medianizer  | [0xB4A44672b55d66fAFA23b4F9Ba28c9C55F76fbfB](https://explorer.testnet.rsk.co/address/0xB4A44672b55d66fAFA23b4F9Ba28c9C55F76fbfB?__ctab=Code) |
 |  BTC/USD |  MOC     |  Mainnet  |  Medianizer  | [0x7B19bb8e6c5188eC483b784d6fB5d807a77b21bF](https://explorer.rsk.co/address/0x7B19bb8e6c5188eC483b784d6fB5d807a77b21bF) |
 |  RIF/USD |  RDOC    |  Mainnet  |  Medianizer  | [0x504EfCadFB020d6bBaeC8a5c5BB21453719d0E00](https://explorer.rsk.co/address/0x504EfCadFB020d6bBaeC8a5c5BB21453719d0E00) |
 |  ETH/BTC |  ETH     |  Mainnet  |  Medianizer  | [0x68862C30d45605EAd8D01eF1632F7BFB18FAB587](https://explorer.rsk.co/address/0x68862C30d45605EAd8D01eF1632F7BFB18FAB587) |
+|  BTC/USDT | USDT    |  Mainnet  |  Medianizer  | [0x5741d55C96176eEca86316b5840Cb208784d5188](https://explorer.rsk.co/address/0x5741d55C96176eEca86316b5840Cb208784d5188?__ctab=Code) |
+
 
 ### Usage
 
