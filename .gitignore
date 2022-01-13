@@ -28,3 +28,8 @@ coverageEnv
 
 # mochaawesome-reports
 mochawesome-report
+
+cache/
+
+.envrc
+

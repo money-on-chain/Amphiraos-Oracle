@@ -30,7 +30,7 @@ contract Medianizer is DSThing {
     bytes12 public next = 0x1;
     uint96 public min = 0x1;
     
-    function set(address wat) public auth {
+    function setPriceFeeder(address wat) public auth {
         bytes12 nextId = bytes12(uint96(next) + 1);
         require(nextId != 0x0);
         this.set(next, wat);

@@ -1,0 +1,35 @@
+{
+  "language": "Solidity",
+  "sources": {
+    "contracts/authority/MoCGovernedAuthority.sol": {
+      "content": "pragma solidity ^0.4.23;\n\n/**\n* @dev MoC Governor interface\n */\ninterface MoCGovernor {\n  function isAuthorizedChanger(address user) external view returns(bool);\n}\n\ncontract DSAuthority {\n    function canCall(\n        address src, address dst, bytes4 sig\n    ) public view returns (bool);\n}\n\n/**\n* @dev MoC governance implementing DSAuthority for Dappsys Auth\n* https://github.com/dapphub/ds-auth\n*/\ncontract MoCGovernedAuthority is DSAuthority{\n  MoCGovernor public governor;\n\n  constructor(address governorAddress) public {\n    governor = MoCGovernor(governorAddress);\n  }\n\n  // Second and third parameters not used\n  // only to comply DSAuthority Interface\n  function canCall(address user, address, bytes4) public view returns (bool) {\n    return governor.isAuthorizedChanger(user);\n  }\n}\n"
+    }
+  },
+  "settings": {
+    "optimizer": {
+      "enabled": true,
+      "runs": 999999
+    },
+    "outputSelection": {
+      "*": {
+        "*": [
+          "abi",
+          "evm.bytecode",
+          "evm.deployedBytecode",
+          "evm.methodIdentifiers",
+          "metadata",
+          "devdoc",
+          "userdoc",
+          "storageLayout",
+          "evm.gasEstimates"
+        ],
+        "": [
+          "ast"
+        ]
+      }
+    },
+    "metadata": {
+      "useLiteralContent": true
+    }
+  }
+}

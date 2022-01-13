@@ -32,13 +32,25 @@ const saveConfig = (config, path) => {
   fs.writeFileSync(path, JSON.stringify(config, null, 2));
 };
 
-const shouldExecuteChanges = currentNetwork =>
+const shouldExecuteChanges = (currentNetwork) =>{
   currentNetwork === 'development' ||
   currentNetwork === 'coverage' ;
+}
+
+const getChainName = (chainId) => {
+  switch(chainId){
+    case    31: return 'rsktestnet';
+    case    30: return 'rskmainnet';
+    case 80001: return 'polygontestnet';
+    case 31337: return 'development';
+    default:    return 'Unknown';
+  }
+}
 
 module.exports = {
   getConfig,
   getNetwork,
   saveConfig,
-  shouldExecuteChanges
+  shouldExecuteChanges,
+  getChainName,
 };

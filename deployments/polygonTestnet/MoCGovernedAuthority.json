@@ -1,0 +1,103 @@
+{
+  "address": "0x9B4399dbbC464fC903b6F120F184B85C381F10C0",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "governor",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "user",
+          "type": "address"
+        },
+        {
+          "name": "",
+          "type": "address"
+        },
+        {
+          "name": "",
+          "type": "bytes4"
+        }
+      ],
+      "name": "canCall",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "governorAddress",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    }
+  ],
+  "transactionHash": "0xfeba3e5f8c745b28ac67fcf0e8b977ef2d7452ef68a5a5995d34c3a151fbc12b",
+  "receipt": {
+    "to": null,
+    "from": "0x153073310327caA6abB76F735d115E5c8bA1617B",
+    "contractAddress": "0x9B4399dbbC464fC903b6F120F184B85C381F10C0",
+    "transactionIndex": 0,
+    "gasUsed": "182080",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000008000000000000000000000000000000000000000000000000000000040800000000000000000000100000000004000000000000000000000000000000000000000000000000080000000000000000000000000000000000000000000000000000000000080000000000200000000200000000000000000000000000000000000000000000000000000000000004000000000000000000001000000000000000000000000000000100040000000000000000000000000000000000000000000000000000000000000000000100020",
+    "blockHash": "0xf8380d49e982950ee52fcc6a89677bae81dc0d55ea81af292aa2bd8e9e7d0ecf",
+    "transactionHash": "0xfeba3e5f8c745b28ac67fcf0e8b977ef2d7452ef68a5a5995d34c3a151fbc12b",
+    "logs": [
+      {
+        "transactionIndex": 0,
+        "blockNumber": 23849149,
+        "transactionHash": "0xfeba3e5f8c745b28ac67fcf0e8b977ef2d7452ef68a5a5995d34c3a151fbc12b",
+        "address": "0x0000000000000000000000000000000000001010",
+        "topics": [
+          "0x4dfe1bbbcf077ddc3e01291eea2d5c70c2b422b415d95645b9adcfd678cb1d63",
+          "0x0000000000000000000000000000000000000000000000000000000000001010",
+          "0x000000000000000000000000153073310327caa6abb76f735d115e5c8ba1617b",
+          "0x000000000000000000000000be188d6641e8b680743a4815dfa0f6208038960f"
+        ],
+        "data": "0x000000000000000000000000000000000000000000000000002d480e405cc60000000000000000000000000000000000000000000000000022284bb7283759f100000000000000000000000000000000000000000000044eb7cb39dbf9206bc900000000000000000000000000000000000000000000000021fb03a8e7da93f100000000000000000000000000000000000000000000044eb7f881ea397d31c9",
+        "logIndex": 0,
+        "blockHash": "0xf8380d49e982950ee52fcc6a89677bae81dc0d55ea81af292aa2bd8e9e7d0ecf"
+      }
+    ],
+    "blockNumber": 23849149,
+    "cumulativeGasUsed": "182080",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [
+    "0x72b957E4eF406b02D18EC0C4607236dC84e21b94"
+  ],
+  "numDeployments": 1,
+  "solcInputHash": "01d37210bedbb925a27930968cc6c9d8",
+  "metadata": "{\"compiler\":{\"version\":\"0.4.24+commit.e67f0147\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"governor\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"user\",\"type\":\"address\"},{\"name\":\"\",\"type\":\"address\"},{\"name\":\"\",\"type\":\"bytes4\"}],\"name\":\"canCall\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"name\":\"governorAddress\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"contracts/authority/MoCGovernedAuthority.sol\":\"MoCGovernedAuthority\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":999999},\"remappings\":[]},\"sources\":{\"contracts/authority/MoCGovernedAuthority.sol\":{\"content\":\"pragma solidity ^0.4.23;\\n\\n/**\\n* @dev MoC Governor interface\\n */\\ninterface MoCGovernor {\\n  function isAuthorizedChanger(address user) external view returns(bool);\\n}\\n\\ncontract DSAuthority {\\n    function canCall(\\n        address src, address dst, bytes4 sig\\n    ) public view returns (bool);\\n}\\n\\n/**\\n* @dev MoC governance implementing DSAuthority for Dappsys Auth\\n* https://github.com/dapphub/ds-auth\\n*/\\ncontract MoCGovernedAuthority is DSAuthority{\\n  MoCGovernor public governor;\\n\\n  constructor(address governorAddress) public {\\n    governor = MoCGovernor(governorAddress);\\n  }\\n\\n  // Second and third parameters not used\\n  // only to comply DSAuthority Interface\\n  function canCall(address user, address, bytes4) public view returns (bool) {\\n    return governor.isAuthorizedChanger(user);\\n  }\\n}\\n\",\"keccak256\":\"0x001eb1ea4d5be3d121894514ad1265861aefe8276b3a067da7e5c82a8cd90b20\"}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5060405160208061023e833981016040525160008054600160a060020a03909216600160a060020a03199092169190911790556101ec806100526000396000f30060806040526004361061004b5763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416630c340a248114610050578063b70096131461008e575b600080fd5b34801561005c57600080fd5b506100656100fb565b6040805173ffffffffffffffffffffffffffffffffffffffff9092168252519081900360200190f35b34801561009a57600080fd5b506100e773ffffffffffffffffffffffffffffffffffffffff600435811690602435167fffffffff0000000000000000000000000000000000000000000000000000000060443516610117565b604080519115158252519081900360200190f35b60005473ffffffffffffffffffffffffffffffffffffffff1681565b60008054604080517fd994d6d500000000000000000000000000000000000000000000000000000000815273ffffffffffffffffffffffffffffffffffffffff87811660048301529151919092169163d994d6d591602480830192602092919082900301818787803b15801561018c57600080fd5b505af11580156101a0573d6000803e3d6000fd5b505050506040513d60208110156101b657600080fd5b50519493505050505600a165627a7a72305820abbcb83a4503290946fc71a43f13af2c3e333fc35cfa7f14946276dbec8966010029",
+  "deployedBytecode": "0x60806040526004361061004b5763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416630c340a248114610050578063b70096131461008e575b600080fd5b34801561005c57600080fd5b506100656100fb565b6040805173ffffffffffffffffffffffffffffffffffffffff9092168252519081900360200190f35b34801561009a57600080fd5b506100e773ffffffffffffffffffffffffffffffffffffffff600435811690602435167fffffffff0000000000000000000000000000000000000000000000000000000060443516610117565b604080519115158252519081900360200190f35b60005473ffffffffffffffffffffffffffffffffffffffff1681565b60008054604080517fd994d6d500000000000000000000000000000000000000000000000000000000815273ffffffffffffffffffffffffffffffffffffffff87811660048301529151919092169163d994d6d591602480830192602092919082900301818787803b15801561018c57600080fd5b505af11580156101a0573d6000803e3d6000fd5b505050506040513d60208110156101b657600080fd5b50519493505050505600a165627a7a72305820abbcb83a4503290946fc71a43f13af2c3e333fc35cfa7f14946276dbec8966010029",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
