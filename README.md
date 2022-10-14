@@ -77,26 +77,47 @@ Take a look to [github api site](https://github.com/money-on-chain/py_Moneyoncha
 
 ### Contract deployment
 
+Use the correct node version
+
+```
+nvm use 8.17
+```
+
 Install packages
 
 ```
 npm install
 ```
 
-compile source contracts
+Compile source contracts
 
 ```
 npm run truffle-compile
 ```
 
-private key
+Private key
 
 ```
 export MNEMONIC=(Private key)
 ```
 
-run deployment
+Run deployment
 
 ```
 npm run deploy-eth-testnet
+```
+
+#### Trubleshooting
+
+if when you install the dependencies you get this
+
+```
+npm ERR! Error while executing:
+npm ERR! /usr/bin/git ls-remote -h -t git://github.com/someguy/somerepo.git
+```
+
+try this before
+
+```
+git config --global url."https://".insteadOf git://
 ```

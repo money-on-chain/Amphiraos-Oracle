@@ -51,6 +51,24 @@ module.exports = {
       skipDryRun: true,
       confirmations: 1
     },
+    arsAlphaTestnet: {
+      host: 'https://public-node.testnet.rsk.co',
+      provider: () => new HDWalletProvider(mnemonic, "https://public-node.testnet.rsk.co"),
+      network_id: '*',
+      gas: 3800000,
+      gasPrice: 69000000,
+      skipDryRun: true,
+      confirmations: 1
+    },
+    mxnAlphaTestnet: {
+      host: 'https://public-node.testnet.rsk.co',
+      provider: () => new HDWalletProvider(mnemonic, "https://public-node.testnet.rsk.co"),
+      network_id: '*',
+      gas: 3800000,
+      gasPrice: 69000000,
+      skipDryRun: true,
+      confirmations: 1
+    },
     ethTestnet: {
       host: 'https://public-node.testnet.rsk.co',
       provider: () => new HDWalletProvider(mnemonic, "https://public-node.testnet.rsk.co"),

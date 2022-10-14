@@ -1,0 +1,6 @@
+{
+  "minValues": 1,
+  "initialPrice": 20,
+  "expirationTime": 300,
+  "governor": "0x4eAC4518e81B3A5198aADAb998D2610B46aAA609"
+}
