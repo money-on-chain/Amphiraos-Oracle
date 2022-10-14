@@ -15,6 +15,7 @@
     "deploy-moc-mainnet": "rm zos.dev-*.json; rm -r build/contracts; truffle migrate --network mocMainnet --reset",
     "deploy-rdoc-testnet": "rm zos.dev-*.json; rm -r build/contracts; truffle migrate --network rdocTestnet --reset",
     "deploy-rdoc-mainnet": "rm zos.dev-*.json; rm -r build/contracts; truffle migrate --network rdocMainnet --reset",
+    "deploy-bsc-testnet": "rm zos.dev-*.json; rm -r build/contracts; truffle migrate --network bscTestnet --reset",
     "flatten-contracts": "bash scripts/contract_flattener.sh"
   },
   "devDependencies": {
