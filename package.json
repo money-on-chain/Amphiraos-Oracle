@@ -16,17 +16,21 @@
     "deploy-rdoc-testnet": "rm zos.dev-*.json; rm -r build/contracts; truffle migrate --network rdocTestnet --reset",
     "deploy-rdoc-mainnet": "rm zos.dev-*.json; rm -r build/contracts; truffle migrate --network rdocMainnet --reset",
     "deploy-bsc-testnet": "rm zos.dev-*.json; rm -r build/contracts; truffle migrate --network bscTestnet --reset",
+    "deploy-polygon-mumbai": "rm zos.dev-*.json; rm -r build/contracts; truffle migrate --network polygonMumbai --reset",
     "flatten-contracts": "bash scripts/contract_flattener.sh"
   },
   "devDependencies": {
     "truffle": "5.0.28",
     "chai": "4.2.0",
-    "truffle-hdwallet-provider": "1.0.14",
+    "@truffle/hdwallet-provider": "1.4.3",
     "ganache-cli": "6.4.4-beta.0",
     "bignumber.js": "9.0.0",
     "eslint": "5.16.0",
     "openzeppelin-test-helpers": "0.4.0",
     "@zemse/solidity-flattener": "1.5.1"
+  },
+  "engines": {
+    "node": "=8.17.0"
   },
   "keywords": [
     "oracle",
