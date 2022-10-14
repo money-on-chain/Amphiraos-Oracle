@@ -7,8 +7,8 @@
   "scripts": {
     "test": "truffle test",
     "truffle-compile": "truffle compile --all",
-    "deploy-ars-alphatestnet": "rm zos.dev-*.json; rm -r build/contracts; truffle migrate --network arsAlphaTestnet --reset",
-    "deploy-mxn-alphatestnet": "rm zos.dev-*.json; rm -r build/contracts; truffle migrate --network mxnAlphaTestnet --reset",
+    "deploy-ars-testnet": "rm zos.dev-*.json; rm -r build/contracts; truffle migrate --network arsTestnet --reset",
+    "deploy-mxn-testnet": "rm zos.dev-*.json; rm -r build/contracts; truffle migrate --network mxnTestnet --reset",
     "deploy-eth-testnet": "rm zos.dev-*.json; rm -r build/contracts; truffle migrate --network ethTestnet --reset",
     "deploy-eth-mainnet": "rm zos.dev-*.json; rm -r build/contracts; truffle migrate --network ethMainnet --reset",
     "deploy-tether-testnet": "rm zos.dev-*.json; rm -r build/contracts; truffle migrate --network tetherTestnet --reset",
