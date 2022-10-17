@@ -3,7 +3,7 @@
   "initialPrice": 1,
   "expirationTime": 10000000,
   "governor": "0x0F93d6b43206a3E5baEb044bfC314bA386F7E573",
-  "MoCMedianizer": "0x10259a35573E1e8f992fc4c3e04218Ea0Da29172",
-  "PriceFactory": "0xC29aEc8680beE4DaEb478FD7Ec929460Bc2Fe516",
-  "PriceFeed": "0x8EA33D6cF807eb3ab8203204dadb3a58E26402f0"
+  "MoCMedianizer": "0x1Fd04611Baf8286836DBEDb27e138c479e1961BC",
+  "PriceFactory": "0x7CE93308bE07fFDd924961edabf130eD45a2e2DA",
+  "PriceFeed": "0x668Bf4c10D0e625C3f8893649a08E682c1b7424F"
 }
