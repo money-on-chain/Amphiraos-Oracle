@@ -52,11 +52,11 @@ module.exports = {
       confirmations: 1
     },
     ethTestnet: {
-      host: 'https://public-node.testnet.rsk.co',
-      provider: () => new HDWalletProvider(mnemonic, "https://public-node.testnet.rsk.co"),
-      network_id: '*',
-      gas: 3800000,
-      gasPrice: 69000000,
+      host: 'https://eth-sepolia.public.blastapi.io',
+      provider: () => new HDWalletProvider(mnemonic, "https://eth-sepolia.public.blastapi.io"),
+      network_id: '11155111',
+      gas: 1000000,
+      gasPrice: 10500000000,
       skipDryRun: true,
       confirmations: 1
     },

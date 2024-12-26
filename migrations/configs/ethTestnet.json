@@ -1,9 +1,9 @@
 {
   "minValues": 1,
-  "initialPrice": 0.072380,
-  "expirationTime": 300,
-  "governor": "0x4eAC4518e81B3A5198aADAb998D2610B46aAA609",
-  "MoCMedianizer": "0x4D4254D3744e1E4beb090ab5d8eB48096ff4aE27",
-  "PriceFactory": "0xB29c04a95F4911411304900885A719315689f2eC",
-  "PriceFeed": "0x4B3F85A1E85ef656E0EeF54d50Fb23Dc509332Cc"
+  "initialPrice": 1,
+  "expirationTime": 2592000,
+  "governor": "0x52d8EE82E4968Ee959514Ad2696166E58C63504D",
+  "MoCMedianizer": "0x814ECb6ba8A8b39721E1DA7Ba2FA8d4982F25631",
+  "PriceFactory": "0x20d2726e29d9CeA0AD029eC6a8b43aeB824aE195",
+  "PriceFeed": "0xE96506bFe55048fd528De28ad612f3Fb647B1B97"
 }
