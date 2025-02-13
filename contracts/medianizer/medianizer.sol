@@ -24,6 +24,7 @@ contract Medianizer is DSThing {
 
     uint128 val;
     bool public has;
+    uint256 lastPublicationBlock;
 
     mapping (bytes12 => address) public values;
     mapping (address => bytes12) public indexes;
@@ -77,6 +78,7 @@ contract Medianizer is DSThing {
         (bytes32 val_, bool has_) = compute();
         val = uint128(val_);
         has = has_;
+        lastPublicationBlock = block.timestamp;
         emit LogValue(val_);
     }
 
@@ -87,6 +89,10 @@ contract Medianizer is DSThing {
     function read() external view returns (bytes32) {
         require(has);
         return bytes32(val);
+    }
+
+    function getLastPublicationBlock() external view returns (uint256) {
+        return lastPublicationBlock;
     }
 
     function compute() public view returns (bytes32, bool) {
